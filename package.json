@@ -1,0 +1,26 @@
+{
+  "name": "data-structures-and-algorithm",
+  "version": "1.0.0",
+  "description": "code-challenge-data-structures-and-algorithms :anger: :exclamation: :question: :thought_balloon:",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",   
+     "test": "jest --verbose --coverage"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/401-advanced-javascript-sohad/data-structures-and-algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/401-advanced-javascript-sohad/data-structures-and-algorithm/issues"
+  },
+  "homepage": "https://github.com/401-advanced-javascript-sohad/data-structures-and-algorithm#readme",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0"
+  }
+}
