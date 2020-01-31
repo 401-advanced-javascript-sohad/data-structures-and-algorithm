@@ -22,5 +22,16 @@ These use while loops to traverse the list.  The worst case would be to traverse
 - insertBefore : Insert Node before another Node
 
 
-## Solution
-![](challenge 6.jpg)
+
+## `.mergeLists(list1, list2)`
+Takes in two linked lists and zips them together, alternating nodes into one large list.
+
+### Approach & Efficiency
+Tracking variable are assigned to the head node for both lists. two tracking variables are assigned to the nodes referenced by the `.next` properties of the current nodes.  The next of the first node is assign to the current node of the second list, and the next of the second node is assigned to the next of the first list's node. 
+ This repeats until the end of one list is found, where the remaining list will continue.
+
+
+### Whiteboard
+
+![](cc7.jpg)
+![](cc-7.jpg)
