@@ -1,5 +1,3 @@
-'use strict';
-
 class Node {
   constructor(data) {
     this.data = data;
@@ -41,6 +39,43 @@ class SinglyLinkedList {
     }
     catch(e) {
       return 'Error calling .append()';
+    }
+  }
+
+  insertBefore(goesBeforeThis, newData) {
+    if(goesBeforeThis === this.head.data) {
+      let newNode = new Node(newData);
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+    let currentNode = this.head;
+    while(currentNode.next !== null) {
+      if(currentNode.next.data === goesBeforeThis) {
+        let newNode = new Node(newData);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return newNode;
+      }
+      else {
+        currentNode = currentNode.next;
+      }
+    }
+  }
+
+  insertAfter(goesAfterThis, newData) {
+    let currentNode = this.head;
+    while(currentNode.next !== null) {
+      if(currentNode.data === goesAfterThis) {
+        console.log(currentNode);
+        let newNode = new Node(newData);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return;
+      }        
+      else {
+        currentNode = currentNode.next;
+      }
     }
   }
 

@@ -74,3 +74,24 @@ describe('Singly Linked Lists', () => {
     expect(list.head.next.data).toEqual('first append');
   });
 });
+
+
+
+describe('insertBefore', () => {
+  it('inserts a node correctly into an array', () => {
+    let list = new SohadLinkedList();
+    list.insert('first insert');
+    list.append('first append');
+    list.insertBefore('first append', 'insertBefore');
+    expect(list.head.next.data).toEqual('insertBefore');
+  });
+});
+describe('insertAfter', () => {
+  it('inserts a node correctly into an array', () => {
+    let list = new SohadLinkedList();
+    list.insert('first insert');
+    list.append('first append');
+    list.insertAfter('first insert', 'insertAfter');
+    expect(list.head.next.data).toEqual('insertAfter');
+  });
+});

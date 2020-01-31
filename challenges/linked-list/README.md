@@ -1,24 +1,26 @@
+# data-structures-and-algorithms
+
 # Singly Linked List
-This demonstrates a class constructor of a singly Linked List
-
-## sohad Qtaitat
-
+- Short brief how it's work and linked to each other as a object chain 
 
 ## Challenge
- create a linked list using classes.
+- Utilize any methods you write should be clean, reusable, abstract component parts to the whole challenge.
 
-*Methods on the Linked List include: 
-1- insert a value to the linked list
-2-search to see if a value exists in a linked list
-3- print the entire linked list
+# Linked List Insertions
+These methods insert new node into the array, either before or after a target node.
 
 ## Approach & Efficiency
+These use while loops to traverse the list.  The worst case would be to traverse the whole length of the array, so the time would be O(n).
 
-I first determine if this is the first value added to the list if it is, this becomes the head.
- If it isn't, I loop through the list looking for the value where the next is null (This is the last node)
- 
-  I then set the new value to that next node. The big O for for this apprach is O(n) due to the unknown length of the node list.
+
+## API
+- insertAfter : Insert node after given value 
+- insert : Create new Node and add it at first
+- to string : convert all list items to string 
+- includes : find certain node 
+- Append : add new node to the end of the list
+- insertBefore : Insert Node before another Node
 
 
 ## Solution
-![](code-challend5.jpg)
+![](challenge 6.jpg)
