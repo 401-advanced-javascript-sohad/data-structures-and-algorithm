@@ -22,6 +22,12 @@ These use while loops to traverse the list.  The worst case would be to traverse
 - insertBefore : Insert Node before another Node
 
 
+### `.getKthFromEnd(value)
+Finds the node that is `value` # nodes away from the end of the list, and returns the value node.
+
+### Approach & Efficiency
+Uses two tracking variables, `first` and `last`.  Both values are initially assigned to the head of the list.  `first` is given a head start by first looping to the node assigned with `value`.  At that point, both `first` and `last` traverse until `first` is at the last node in the list.  The value of the node that is now at `last` will be the Kth node from the end.
+
 
 ## `.mergeLists(list1, list2)`
 Takes in two linked lists and zips them together, alternating nodes into one large list.
@@ -33,5 +39,4 @@ Tracking variable are assigned to the head node for both lists. two tracking var
 
 ### Whiteboard
 
-![](cc7.jpg)
-![](cc-7.jpg)
+![](cck.jpg)

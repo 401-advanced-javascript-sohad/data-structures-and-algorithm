@@ -18,7 +18,7 @@ class SinglyLinkedList {
       return 'New node inserted to list';
     }
     catch(e) {
-      return 'Error calling .insert()';
+      return 'Error calling ';
     }
   }
 
@@ -38,7 +38,7 @@ class SinglyLinkedList {
       return `New node appended to list`;
     }
     catch(e) {
-      return 'Error calling .append()';
+      return 'Error calling ';
     }
   }
 
@@ -78,6 +78,19 @@ class SinglyLinkedList {
       }
     }
   }
+  /////////////////////////////////////////////////////////////////////////////////////////
+  getKthFromEnd(lastNum) {
+    let first = this.head;
+    let last = this.head;
+    for (let i = 0; i < lastNum; i++) {
+      first = first.next;
+    }
+    while(first.next) {
+      first = first.next;
+      last = last.next;
+    }
+    return last.data;
+  }
 
   includes(value) {
     try {
@@ -98,9 +111,10 @@ class SinglyLinkedList {
       }
     }
     catch(e) {
-      return 'Error calling .includes()';
+      return 'Error calling ';
     }
   }
+
 
   print() {
     try {
