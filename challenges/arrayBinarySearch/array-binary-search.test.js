@@ -14,7 +14,7 @@ describe('tests code challange 3', ()=>{
   });
 
 
-//////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////
 
   it('return -1 if value is not found ', ()=>{
     let arr = [11,22,33,44,55,66,77];
@@ -24,7 +24,7 @@ describe('tests code challange 3', ()=>{
     expect(result).toEqual(expected);
   });
 
-////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
 
   it('return array if value is in array multipule times', ()=>{
     let arr = [11,22,33,22,55,66,77];

@@ -6,7 +6,7 @@ let codeChallange = module.exports = {};
 
 codeChallange.BinarySearch = function(arr,val){
 
-    let idx = 0;
+  let idx = 0;
 
   let valArr = [];
 
@@ -16,9 +16,9 @@ codeChallange.BinarySearch = function(arr,val){
 
     if(arr[i] === val){
     
-        valArr[idx] = i;
+      valArr[idx] = i;
     
-        idx++;
+      idx++;
     }
   }
   
@@ -28,7 +28,7 @@ codeChallange.BinarySearch = function(arr,val){
   
     return valArr[0];
   
-}if(idx>1){
+  }if(idx>1){
     return valArr;
   }
 

@@ -21,5 +21,5 @@ describe('testing module', () => {
     let expected = [5,10,15,20,25];
     let result = shiftArray.insertShiftArray([5,10,20,25], 15);
     expect(result).toEqual(expected);
-  })
-})
+  });
+});
