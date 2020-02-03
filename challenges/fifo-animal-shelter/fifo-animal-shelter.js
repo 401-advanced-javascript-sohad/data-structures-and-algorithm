@@ -37,8 +37,9 @@ class AnimalShelter{
     }
   }
 
-  dequeue(input){     //if input is wrong return null
+  dequeue(input){
     let output;
+
     if (!this.head){
       return null;
     }
@@ -52,7 +53,6 @@ class AnimalShelter{
       return oldFront.type;
     }
 
-    // point to reset and puts in tail
     let temp = new Animal('temp');
     this.tail.next = temp;
     this.tail = temp;
@@ -63,16 +63,19 @@ class AnimalShelter{
       this.head = this.head.next;
       //removes old head from queue
       toBack.next = null;
+      //sets it on the tail of queue
       this.tail.next = toBack;
       this.tail = toBack;
       toBack = this.head;
     }
     output = this.head.type;
 
+    this.head=this.head.next;
     toBack.next = null;
     while(this.head.type !== 'temp'){
       toBack = this.head;
       this.head = this.head.next;
+      //remove the old head from the queue
       toBack.next = null;
       this.tail.next = toBack;
       this.tail = toBack;
