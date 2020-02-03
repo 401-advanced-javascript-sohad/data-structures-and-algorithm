@@ -1,5 +1,5 @@
 'use strict';
-let Animal = require('../fifo-animal-shelter.js').Animal;
+// let Animal = require('../fifo-animal-shelter.js').Animal;
 let AnimalShelter = require('../fifo-animal-shelter.js').AnimalShelter;
 
 let test = new AnimalShelter('cat');
