@@ -51,10 +51,5 @@ describe ('Animal Shelter Module', () =>{
 
 
   });
-  it('will dequeue from farther back',() =>{
-    let catTest = test.dequeue('cat');
-    expect(catTest).toEqual('cat');
-    expect(test.head.type).toEqual('dog');
-  });
 
 });
