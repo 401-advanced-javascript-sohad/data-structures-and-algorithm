@@ -21,7 +21,7 @@ class BinaryTree {
       array.push(node.value);
       _next(node.left, output);
       _next(node.right, output);
-    }
+    };
 
     _next(this.root, output);
     return output;
@@ -40,13 +40,13 @@ class BinaryTree {
       _next(node.left, output);
       array.push(node.value);
       _next(node.right, output);
-    }
+    };
     
     _next(this.root, output);
     return output;
   }
 
-    /////////////////////////////////////////////postOrder/////////////////////////////////////////////////////////
+  /////////////////////////////////////////////postOrder/////////////////////////////////////////////////////////
 
 
   postOrder() {
@@ -58,12 +58,12 @@ class BinaryTree {
       }
       _next(node.left, output);
       _next(node.right, output);
-      array.push(node.value)
-    }
+      array.push(node.value);
+    };
 
     _next(this.root, output);
     return output;
   }
 }
 
-module.exports = BinaryTree
+module.exports = BinaryTree;

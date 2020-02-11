@@ -1,27 +1,27 @@
 'use strict';
 
-const BinaryTree = require('./tree.js')
-const BinarySearchTree = require('./binary-search-tree.js')
-const Node = require('./node.js')
+const BinaryTree = require('./tree.js');
+const BinarySearchTree = require('./binary-search-tree.js');
+const Node = require('./node.js');
 
 const createTree = () => {
  
-    let sohadBinaryTree= new BinaryTree(1);
+  let sohadBinaryTree= new BinaryTree(1);
  
-    sohadBinaryTree.root.left = new Node(2);
+  sohadBinaryTree.root.left = new Node(2);
  
-    sohadBinaryTree.root.right = new Node(3);
+  sohadBinaryTree.root.right = new Node(3);
  
-    sohadBinaryTree.root.left.left = new Node(4);
+  sohadBinaryTree.root.left.left = new Node(4);
  
-    sohadBinaryTree.root.left.right = new Node(5);
+  sohadBinaryTree.root.left.right = new Node(5);
  
-    sohadBinaryTree.root.right.left = new Node(6);
+  sohadBinaryTree.root.right.left = new Node(6);
  
-    sohadBinaryTree.root.right.right = new Node(7);
+  sohadBinaryTree.root.right.right = new Node(7);
  
-    return sohadBinaryTree;
-}
+  return sohadBinaryTree;
+};
 
 
 
@@ -34,7 +34,7 @@ const createTree = () => {
 
 describe('Binary Tree', () => {
 
-//1- Can successfully instantiate an empty tree
+  //1- Can successfully instantiate an empty tree
   it('Can successfully instantiate an empty tree', () => {
   
     let sohadBinaryTree = new BinaryTree();
@@ -42,9 +42,9 @@ describe('Binary Tree', () => {
     expect(sohadBinaryTree).toBeInstanceOf(BinaryTree);
   });
                                         
-                         /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
-// 2- Can successfully instantiate a tree with a single root node
+  // 2- Can successfully instantiate a tree with a single root node
   it('Can successfully instantiate a tree with a single root node', () => {
     let sohadBinaryTree = new BinaryTree(1);
    
@@ -53,11 +53,11 @@ describe('Binary Tree', () => {
     expect(sohadBinaryTree.root.value).toEqual(1);
   });
 
-                         /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
   //3- Can successfully add a left child and right child to a single root node
-it('Can successfully add a left child and right child to a single root node ', () => {
+  it('Can successfully add a left child and right child to a single root node ', () => {
    
     let sohadBinaryTree = new BinaryTree(1);
     sohadBinaryTree.root.left = new Node(5);
@@ -67,47 +67,47 @@ it('Can successfully add a left child and right child to a single root node ', (
   });
 
 
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
- // 4-Can successfully return a collection from a preorder traversal
- it('Can successfully return a collection from a preorder traversal', () => {
+  // 4-Can successfully return a collection from a preorder traversal
+  it('Can successfully return a collection from a preorder traversal', () => {
     
     let sohadBinaryTree = createTree();
     
     let preOrder = sohadBinaryTree.preOrder();
     
-    console.log(preOrder)
+    console.log(preOrder);
     
-    expect(preOrder).toEqual([1, 2, 4, 5, 3, 6, 7])
+    expect(preOrder).toEqual([1, 2, 4, 5, 3, 6, 7]);
   });
 
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
-// 5- Can successfully return a collection from an inorder traversal
+  // 5- Can successfully return a collection from an inorder traversal
   it('Can successfully return a collection from an inorder traversal', () => {
    
     let sohadBinaryTree = createTree();
    
     let inOrder = sohadBinaryTree.inOrder();
    
-    console.log(inOrder)
+    console.log(inOrder);
    
     expect(inOrder).toEqual([4, 2, 5, 1, 6, 3, 7]);
   });
 
-                         /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
- // 6-Can successfully return a collection from a postorder traversal
- it('Can successfully return a collection from a postorder traversal', () => {
+  // 6-Can successfully return a collection from a postorder traversal
+  it('Can successfully return a collection from a postorder traversal', () => {
   
     let sohadBinaryTree = createTree();
   
     let postOrder = sohadBinaryTree.postOrder();
   
-    console.log(postOrder)
+    console.log(postOrder);
   
     expect(postOrder).toEqual([4, 5, 2, 6, 7, 3, 1]);
   });
@@ -135,7 +135,7 @@ describe('Binary Search Tree', () => {
   });
 
 
-                         /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
 
@@ -145,7 +145,7 @@ describe('Binary Search Tree', () => {
     expect(sohadBinaryTree.root.value).toEqual(1);
   });
 
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
   it('Can successfully add a left child and right child to a single root node ', () => {
@@ -157,7 +157,7 @@ describe('Binary Search Tree', () => {
   });
 
 
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
   it('can add an item to a tree', () => {
@@ -168,7 +168,7 @@ describe('Binary Search Tree', () => {
     expect(sohadBinaryTree.root.left.value).toEqual(2);
   });
 
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
   it('adds left value < right value', () => {
@@ -182,7 +182,7 @@ describe('Binary Search Tree', () => {
   });
 
  
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
   it('returns a boolean', () => {
@@ -191,7 +191,7 @@ describe('Binary Search Tree', () => {
     expect(result).toBe(false);
   });
 
-                           /////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////
 
 
   it('returns true output if a value in the tree', () => {
@@ -201,5 +201,5 @@ describe('Binary Search Tree', () => {
     sohadBinaryTree.add(4);
     let result = sohadBinaryTree.contains(4);
     expect(result).toBe(true);
-  })
-})
+  });
+});

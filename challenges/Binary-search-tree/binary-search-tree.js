@@ -24,24 +24,24 @@ class BinarySearchTree {
 
         if(root.left === null) {
           
-            root.left = new Node(value);
+          root.left = new Node(value);
           
-            return;
+          return;
         
         
-        } else { _next (root.left) };
+        } else { _next (root.left); }
       }
 
       else if (value > root.value) {
 
         if(root.right === null) {
           
-            root.right = new Node(value);
+          root.right = new Node(value);
           
-            return;
-        } else { _next(root.right) };
+          return;
+        } else { _next(root.right); }
       }    
-    }
+    };
     _next(this.root);
   }
 
@@ -58,7 +58,7 @@ class BinarySearchTree {
       }
       _next(node.right);
       _next(node.left);
-    }
+    };
     
     _next(this.root);
     return result;
