@@ -4,6 +4,8 @@ const findMaxVal = require('./max-binary-tree.js');
 
 describe('Find Max Binary Tree', ()=>{
   let firstTree = null;
+  let secondTree = null;
+
 
 
   beforeAll(()=>{
