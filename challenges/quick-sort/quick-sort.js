@@ -36,7 +36,7 @@ function quickSort(arr, left, right){
     return low + 1;
   }
   
-  
+
   function swap(arr, i, low){
     let temp = arr[i];
     arr[i] = arr[low];
