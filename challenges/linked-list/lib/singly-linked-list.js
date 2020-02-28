@@ -10,6 +10,8 @@ class SinglyLinkedList {
     this.head = null;
   }
 
+  
+
   insert(data) {
     try {
       let newNode = new Node(data);
